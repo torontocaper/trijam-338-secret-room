@@ -1,0 +1,57 @@
+[gd_scene load_steps=4 format=3 uid="uid://b4skrl5efvmv0"]
+
+[ext_resource type="FontFile" uid="uid://wabshjtxswsd" path="res://assets/fonts/disket-mono/Disket-Mono-Bold.ttf" id="1_s2ta7"]
+[ext_resource type="Script" uid="uid://c66yy822iffa" path="res://panel_door.gd" id="2_ayt76"]
+
+[sub_resource type="StyleBoxFlat" id="StyleBoxFlat_s2ta7"]
+bg_color = Color(0.57254905, 0.5764706, 0.5529412, 1)
+border_color = Color(0.9098039, 0.8392157, 0.7529412, 1)
+border_blend = true
+corner_radius_top_left = 8
+corner_radius_top_right = 8
+corner_radius_bottom_right = 8
+corner_radius_bottom_left = 8
+shadow_color = Color(1, 1, 1, 0.5882353)
+shadow_size = 12
+
+[node name="Intro" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="ColorRect" type="ColorRect" parent="."]
+clip_contents = true
+custom_minimum_size = Vector2(1152, 648)
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+color = Color(0.57254905, 0.5764706, 0.5529412, 1)
+
+[node name="LabelTitle" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+theme_override_colors/font_outline_color = Color(0.4, 0.4, 0.4, 0.5882353)
+theme_override_constants/line_spacing = -36
+theme_override_constants/outline_size = 16
+theme_override_fonts/font = ExtResource("1_s2ta7")
+theme_override_font_sizes/font_size = 192
+text = "ROOM OF SECRETS"
+horizontal_alignment = 1
+vertical_alignment = 1
+autowrap_mode = 2
+
+[node name="PanelDoor" type="Panel" parent="."]
+layout_mode = 0
+offset_left = 664.0
+offset_top = 164.0
+offset_right = 755.0
+offset_bottom = 296.0
+theme_override_styles/panel = SubResource("StyleBoxFlat_s2ta7")
+script = ExtResource("2_ayt76")

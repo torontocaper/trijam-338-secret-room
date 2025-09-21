@@ -1,0 +1,45 @@
+[gd_scene load_steps=4 format=3 uid="uid://boag1lta23q4s"]
+
+[ext_resource type="PackedScene" uid="uid://c17ieecjvrc3t" path="res://cent_con_spyco.tscn" id="1_dkjp3"]
+[ext_resource type="Script" uid="uid://caa2h5u5ekfy8" path="res://svp_con_test.gd" id="2_y26ce"]
+
+[sub_resource type="ViewportTexture" id="ViewportTexture_y26ce"]
+viewport_path = NodePath("SVPConTest/SubViewport")
+
+[node name="ViewportTest" type="Control"]
+layout_mode = 3
+anchors_preset = 15
+anchor_right = 1.0
+anchor_bottom = 1.0
+grow_horizontal = 2
+grow_vertical = 2
+
+[node name="CentConSpyco" parent="." instance=ExtResource("1_dkjp3")]
+layout_mode = 0
+anchors_preset = 0
+
+[node name="SVPConTest" type="SubViewportContainer" parent="."]
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+script = ExtResource("2_y26ce")
+
+[node name="SubViewport" type="SubViewport" parent="SVPConTest"]
+size = Vector2i(256, 256)
+
+[node name="CanvasLayer" type="CanvasLayer" parent="SVPConTest/SubViewport"]
+scale = Vector2(2, 2)
+transform = Transform2D(2, 0, 0, 2, 0, 0)
+
+[node name="CentConSpyco" parent="SVPConTest/SubViewport/CanvasLayer" instance=ExtResource("1_dkjp3")]
+offset_left = -512.0
+offset_top = -260.0
+offset_right = 512.0
+offset_bottom = 260.0
+
+[node name="TextureRect" type="TextureRect" parent="."]
+visible = false
+layout_mode = 0
+offset_right = 40.0
+offset_bottom = 40.0
+texture = SubResource("ViewportTexture_y26ce")
