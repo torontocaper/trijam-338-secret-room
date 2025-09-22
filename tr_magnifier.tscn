@@ -1,0 +1,10 @@
+[gd_scene load_steps=3 format=3 uid="uid://byylvl10mcch1"]
+
+[ext_resource type="Texture2D" uid="uid://beb6vrjlmwj4e" path="res://assets/sprites/circle-magnifying-glass.png" id="1_4hks0"]
+[ext_resource type="Script" uid="uid://cq2hw6m40jrma" path="res://tr_magnifier.gd" id="2_3nb7y"]
+
+[node name="TRMagnifier" type="TextureRect"]
+offset_right = 40.0
+offset_bottom = 40.0
+texture = ExtResource("1_4hks0")
+script = ExtResource("2_3nb7y")

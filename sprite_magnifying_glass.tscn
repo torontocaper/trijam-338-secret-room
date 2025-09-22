@@ -1,0 +1,8 @@
+[gd_scene load_steps=3 format=3 uid="uid://6tj72hmll4bm"]
+
+[ext_resource type="Texture2D" uid="uid://beb6vrjlmwj4e" path="res://assets/sprites/circle-magnifying-glass.png" id="1_f83iv"]
+[ext_resource type="Script" uid="uid://p87otedvsld3" path="res://sprite_magnifying_glass.gd" id="2_6h4w0"]
+
+[node name="MagnifyingGlass" type="Sprite2D"]
+texture = ExtResource("1_f83iv")
+script = ExtResource("2_6h4w0")

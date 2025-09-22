@@ -1,6 +1,7 @@
-[gd_scene load_steps=3 format=3 uid="uid://cwnblyb07sud6"]
+[gd_scene load_steps=4 format=3 uid="uid://cwnblyb07sud6"]
 
 [ext_resource type="FontFile" uid="uid://vxwyhesuilfx" path="res://assets/fonts/special-elite/SpecialElite-Regular.ttf" id="1_ig7tw"]
+[ext_resource type="PackedScene" uid="uid://byylvl10mcch1" path="res://tr_magnifier.tscn" id="2_0xm2m"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0.9098039, 0.8392157, 0.7529412, 1)
@@ -20,7 +21,7 @@ offset_right = 40.0
 offset_bottom = 40.0
 color = Color(0.57254905, 0.5764706, 0.5529412, 1)
 
-[node name="Paper" type="Panel" parent="."]
+[node name="PanelPaper" type="Panel" parent="."]
 custom_minimum_size = Vector2(300, 400)
 layout_mode = 0
 offset_left = 440.0
@@ -29,7 +30,7 @@ offset_right = 740.0
 offset_bottom = 527.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
-[node name="LetterText" type="Label" parent="Paper"]
+[node name="LabelLetterText" type="Label" parent="PanelPaper"]
 layout_mode = 0
 offset_left = 23.0
 offset_top = 67.0
@@ -47,3 +48,11 @@ On this desk, you'll find several tools of your trade:
 - a cipher wheel
 I trust you've been trained to use them."
 autowrap_mode = 3
+
+[node name="TRMagnifier" parent="." instance=ExtResource("2_0xm2m")]
+layout_mode = 0
+offset_left = 158.99998
+offset_top = 170.99998
+offset_right = 545.0
+offset_bottom = 557.0
+scale = Vector2(0.50012374, 0.50012374)
