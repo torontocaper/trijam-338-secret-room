@@ -1,0 +1,15 @@
+[gd_scene load_steps=2 format=3 uid="uid://dm1cflfpt5rnm"]
+
+[ext_resource type="PackedScene" uid="uid://cwnblyb07sud6" path="res://main.tscn" id="1_dxie4"]
+
+[node name="Main" instance=ExtResource("1_dxie4")]
+
+[node name="LabelLetterText" parent="PanelPaper" index="0"]
+text = "Congratulations!
+You've passed the first test. "
+
+[node name="TRMagnifier" parent="." index="3"]
+offset_left = 955.0
+offset_top = 482.0
+offset_right = 1155.0
+offset_bottom = 682.0

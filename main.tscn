@@ -1,7 +1,10 @@
-[gd_scene load_steps=4 format=3 uid="uid://cwnblyb07sud6"]
+[gd_scene load_steps=7 format=3 uid="uid://cwnblyb07sud6"]
 
+[ext_resource type="Texture2D" uid="uid://f0dh6iut7qqg" path="res://assets/textures/Poliigon_WoodVeneerOak_7760_BaseColor.jpg" id="1_h2yge"]
 [ext_resource type="FontFile" uid="uid://vxwyhesuilfx" path="res://assets/fonts/special-elite/SpecialElite-Regular.ttf" id="1_ig7tw"]
+[ext_resource type="Script" uid="uid://pmpbwmxqfcw8" path="res://main.gd" id="1_lquwl"]
 [ext_resource type="PackedScene" uid="uid://byylvl10mcch1" path="res://tr_magnifier.tscn" id="2_0xm2m"]
+[ext_resource type="FontFile" uid="uid://cbb0aje6ncdqi" path="res://assets/fonts/vanilla-cream-ox.regular.otf" id="3_1bvp3"]
 
 [sub_resource type="StyleBoxFlat" id="StyleBoxFlat_0xm2m"]
 bg_color = Color(0.9098039, 0.8392157, 0.7529412, 1)
@@ -13,46 +16,71 @@ anchor_right = 1.0
 anchor_bottom = 1.0
 grow_horizontal = 2
 grow_vertical = 2
+script = ExtResource("1_lquwl")
 
-[node name="ColorRect" type="ColorRect" parent="."]
+[node name="TextureRectDesk" type="TextureRect" parent="."]
 custom_minimum_size = Vector2(1148, 648)
 layout_mode = 0
-offset_right = 40.0
-offset_bottom = 40.0
-color = Color(0.57254905, 0.5764706, 0.5529412, 1)
+offset_left = -257.0
+offset_top = -283.0
+offset_right = 1791.0
+offset_bottom = 1765.0
+rotation = 1.5707964
+pivot_offset = Vector2(1024, 1024)
+texture = ExtResource("1_h2yge")
+
+[node name="LabelSecret" type="Label" parent="."]
+layout_mode = 1
+anchors_preset = 7
+anchor_left = 0.5
+anchor_top = 1.0
+anchor_right = 0.5
+anchor_bottom = 1.0
+offset_left = 325.0
+offset_top = -147.0
+offset_right = 506.0
+offset_bottom = -135.0
+grow_horizontal = 2
+grow_vertical = 0
+rotation = 0.4537856
+theme_override_colors/font_color = Color(0.7607843, 0.6156863, 0.50980395, 1)
+theme_override_colors/font_outline_color = Color(0.6862745, 0.5411765, 0.43529412, 1)
+theme_override_constants/outline_size = 2
+theme_override_fonts/font = ExtResource("3_1bvp3")
+theme_override_font_sizes/font_size = 12
+text = "To flip the paper over, press the \"F\" key"
 
 [node name="PanelPaper" type="Panel" parent="."]
-custom_minimum_size = Vector2(300, 400)
+custom_minimum_size = Vector2(425, 550)
 layout_mode = 0
-offset_left = 440.0
-offset_top = 127.0
-offset_right = 740.0
-offset_bottom = 527.0
+offset_left = 367.0
+offset_top = 47.0
+offset_right = 792.0
+offset_bottom = 597.0
 theme_override_styles/panel = SubResource("StyleBoxFlat_0xm2m")
 
 [node name="LabelLetterText" type="Label" parent="PanelPaper"]
+custom_minimum_size = Vector2(382.5, 495)
 layout_mode = 0
-offset_left = 23.0
-offset_top = 67.0
-offset_right = 283.0
-offset_bottom = 336.0
+offset_left = 21.0
+offset_top = 35.0
+offset_right = 403.5
+offset_bottom = 530.0
 theme_override_colors/font_color = Color(0, 0, 0, 1)
 theme_override_constants/paragraph_spacing = 12
 theme_override_fonts/font = ExtResource("1_ig7tw")
 theme_override_font_sizes/font_size = 16
 text = "Attn: SpyCo Recruit
-Welcome to the Room of Secrets.
-On this desk, you'll find several tools of your trade:
-- a magnifying glass
-- a UV lamp
-- a cipher wheel
-I trust you've been trained to use them."
+Thank you for your intersest in the Room of Secrets.
+As you are no doubt aware, this office is reserved only for the most *intelligent* intelligence officers.
+To prove your worthiness, you'll be put through a number of tests.
+When you're ready to begin, please flip the paper over.
+"
 autowrap_mode = 3
 
 [node name="TRMagnifier" parent="." instance=ExtResource("2_0xm2m")]
 layout_mode = 0
-offset_left = 158.99998
-offset_top = 170.99998
-offset_right = 545.0
-offset_bottom = 557.0
-scale = Vector2(0.50012374, 0.50012374)
+offset_left = 80.0
+offset_top = 309.0
+offset_right = 280.0
+offset_bottom = 509.0

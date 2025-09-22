@@ -1,9 +1,19 @@
-[gd_scene load_steps=3 format=3 uid="uid://byylvl10mcch1"]
+[gd_scene load_steps=5 format=3 uid="uid://byylvl10mcch1"]
 
-[ext_resource type="Texture2D" uid="uid://beb6vrjlmwj4e" path="res://assets/sprites/circle-magnifying-glass.png" id="1_4hks0"]
+[ext_resource type="Shader" uid="uid://o4i4hr7rlf5x" path="res://tr_magnifier.gdshader" id="1_3nb7y"]
+[ext_resource type="Texture2D" uid="uid://cil6dlxi7cmki" path="res://assets/sprites/circle-magnifying-glass-200.png" id="1_4hks0"]
 [ext_resource type="Script" uid="uid://cq2hw6m40jrma" path="res://tr_magnifier.gd" id="2_3nb7y"]
 
+[sub_resource type="ShaderMaterial" id="ShaderMaterial_uygx3"]
+shader = ExtResource("1_3nb7y")
+shader_parameter/zoom = 4.0
+shader_parameter/lens_center_uv = Vector2(0.5, 0.5)
+shader_parameter/screen_size = Vector2(1152, 648)
+shader_parameter/outer_radius_px = 100.0
+shader_parameter/frame_thickness_px = 13.0
+
 [node name="TRMagnifier" type="TextureRect"]
+material = SubResource("ShaderMaterial_uygx3")
 offset_right = 40.0
 offset_bottom = 40.0
 texture = ExtResource("1_4hks0")
