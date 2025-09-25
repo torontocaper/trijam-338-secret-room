@@ -72,7 +72,7 @@ theme_override_constants/paragraph_spacing = 12
 theme_override_fonts/font = ExtResource("1_ig7tw")
 theme_override_font_sizes/font_size = 16
 text = "Attn: SpyCo Recruit
-Thank you for your intersest in the Room of Secrets.
+Thank you for your interest in the Room of Secrets.
 As you are no doubt aware, this office is reserved only for the most *intelligent* intelligence officers.
 To prove your worthiness, you'll be put through a number of tests.
 When you're ready to begin, please flip the paper over.
